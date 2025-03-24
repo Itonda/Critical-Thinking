@@ -42,7 +42,7 @@ class CheckingAccount extends BankAccount {
                "First Name: " + getFirstName() + "\n" +
                "Last Name: " + getLastName() + "\n" +
                "Account ID: " + getAccountID() + "\n" +
-               "Balance: $" + getBalance() + "\n" +
+               "Balance: $" + String.format("%.2f", getBalance()) + "\n" +
                "Interest Rate: " + interestRate + "%\n" +
                "Overdraft Fee: $" + overdraftFee;
     }
