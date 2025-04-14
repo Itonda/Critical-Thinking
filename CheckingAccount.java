@@ -13,7 +13,8 @@ class CheckingAccount extends BankAccount {
     }
 
     // Parameterized constructor
-    public CheckingAccount(String firstName, String lastName, int accountID, double balance, double interestRate, double overdraftFee, double overdraftLimit) {
+    public CheckingAccount(String firstName, String lastName, int accountID, double balance, 
+                           double interestRate, double overdraftFee, double overdraftLimit) {
         super(firstName, lastName, accountID, balance);
         this.interestRate = interestRate;
         this.overdraftFee = overdraftFee;
@@ -59,6 +60,7 @@ class CheckingAccount extends BankAccount {
                "Account ID: " + getAccountID() + "\n" +
                "Balance: $" + String.format("%.2f", getBalance()) + "\n" +
                "Interest Rate: " + interestRate + "%\n" +
-               "Overdraft Fee: $" + overdraftFee;
+               "Overdraft Fee: $" + overdraftFee + "\n" +
+                "Overdraft Limit: $" + overdraftLimit;
     }
 }

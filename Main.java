@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         // Create a CheckingAccount object
-        CheckingAccount checkingAccount = new CheckingAccount("John", "Doe", 12345, 1000.0, 1.7, 30.0, 100.0);
+        CheckingAccount checkingAccount = new CheckingAccount("John", "Doe", 
+                                                    12345, 1000.0, 1.7, 30.0, 100.0);
         
         // Display account summary
         System.out.println(checkingAccount.accountSummary());
@@ -26,7 +27,8 @@ public class Main {
         System.out.println("Another withdrawal of $35:");
         double overdraftWithdrawalAmount2 = 35.0;
         checkingAccount.processWithdrawal(overdraftWithdrawalAmount2);
-        System.out.printf("Balance after overdraft withdrawal: $%.2f%n", checkingAccount.getBalance());
+        System.out.printf("Balance after withdrawal exceeding overdraft limit (declined, balance would be -$105): $%.2f%n", checkingAccount.getBalance());
+
         // Test deposit after overdraft
         double depositAmount2 = 500.0;
         checkingAccount.deposit(depositAmount2);
